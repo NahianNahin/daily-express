@@ -9,10 +9,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <!-- BOOTSTRAP JS  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FONT AWOSOME  -->
+    <script src="https://kit.fontawesome.com/35405c3e34.js" crossorigin="anonymous"></script>
+
     <!-- Custom CSS  -->
     <style>
       main{
         margin-top: 6rem;
+        margin-bottom: 6rem;
       }
       hr{
         border: 1px solid black;
@@ -47,15 +51,15 @@
       <hr>
       <!-- Catagoeirs UI  -->
       <div class="d-lg-flex gap-5 p-4">
-        <h6 class="text-secondary fw-semibold">Home</h6>
-        <h6 class="text-secondary fw-semibold">Breaking news </h6>
-        <h6 class="text-secondary fw-semibold">Regular news</h6>
-        <h6 class="text-secondary fw-semibold">International news</h6>
-        <h6 class="text-secondary fw-semibold">Sports</h6>
-        <h6 class="text-secondary fw-semibold">Entertainment</h6>
-        <h6 class="text-secondary fw-semibold">Culture</h6>
-        <h6 class="text-secondary fw-semibold">Arts</h6>
-        <h6 class="text-secondary fw-semibold">All news</h6>
+        <h6 class="text-secondary fw-semibold" onclick="loadNewsByCategories('08')">Home</h6>
+        <h6 class="text-secondary fw-semibold" onclick="loadNewsByCategories('01')">Breaking news </h6>
+        <h6 class="text-secondary fw-semibold" onclick="loadNewsByCategories('02')">Regular news</h6>
+        <h6 class="text-secondary fw-semibold" onclick="loadNewsByCategories('03')">International news</h6>
+        <h6 class="text-secondary fw-semibold" onclick="loadNewsByCategories('04')">Sports</h6>
+        <h6 class="text-secondary fw-semibold" onclick="loadNewsByCategories('05')">Entertainment</h6>
+        <h6 class="text-secondary fw-semibold" onclick="loadNewsByCategories('06')">Culture</h6>
+        <h6 class="text-secondary fw-semibold" onclick="loadNewsByCategories('07')">Arts</h6>
+        <h6 class="text-secondary fw-semibold" onclick="loadNewsByCategories('08')">All news</h6>
       </div>
       <!-- Result found section  -->
 
@@ -78,18 +82,21 @@
         </div>
       </section>
       <!-- News Post Section  -->
-      <section>
-
+      <section id="news-container">
+        
       </section>
       
     </main>
     <!-- Footer section  -->
 
-    <footer class="text-center bg-white p-3 fixed-bottom">
+    <footer class="text-center bg-white p-3 fixed-bottom mt-5">
       <small>Copyright 2022 The Daily Express</small>
     </footer>
-
+    
 
     <script src="news.js"></script>
 </body>
 </html>
+
+<!--  -->
+<!-- <p class="m-0"><small>${singleNews.author.published_date}</small></p> -->
