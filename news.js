@@ -16,7 +16,7 @@ const displayCategories = (categories) => {
       console.log(category);
       const div = document.createElement('div');
       div.innerHTML = `
-      <h6 class="text-secondary fw-semibold" onclick="loadNewsByCategories('${category.category_id}','${category.category_name}')">${category.category_name}</h6>
+      <h6 class="text-secondary fw-semibold link-danger pointer" onclick="loadNewsByCategories('${category.category_id}','${category.category_name}')">${category.category_name}</h6>
       `;
       categoriesContainer.appendChild(div);
     })
@@ -56,7 +56,7 @@ const displayNews = (allNews,name) => {
           <div class="card-body">
             <h5 class="card-title">${singleNews.title}</h5>
             <p class="card-text"><small class="text-muted">${singleNews.details.slice(0,250)}...</small></p>
-            <p class="card-text d-lg-none d-md-block"><small class="text-muted">${singleNews.details.slice(151,250)}...</small></p>
+            <p class="card-text d-lg-none d-md-none"><small class="text-muted">${singleNews.details.slice(151,250)}...</small></p>
             <div class="d-flex justify-content-between align-items-center">
         <div class="d-flex gap-3 align-items-center">
           <div>
@@ -68,7 +68,7 @@ const displayNews = (allNews,name) => {
           </div>
         </div>
         <div><p class="m-0" ><i class="fa-regular fa-eye"></i> ${singleNews.total_view ? singleNews.total_view : 'No Data Available'}</p> </div>
-        <div class="d-none d-md-block d-lg-block">
+        <div class="d-none d-md-none d-lg-block">
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>

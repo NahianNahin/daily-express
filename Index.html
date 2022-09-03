@@ -21,7 +21,9 @@
       hr{
         border: 1px solid black;
       }
-      
+      .pointer{
+        cursor: pointer;
+      }
     </style>
 </head>
 <body class="bg-secondary bg-opacity-10">
@@ -36,7 +38,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ms-auto  mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="Index.html">News</a>
+                  <a class="nav-link active link-danger fw-semibold" aria-current="page" href="Index.html">News</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="blog.html">Blogs</a>
@@ -51,7 +53,7 @@
       <hr>
       <!-- Catagoeirs UI  -->
       <div class="d-lg-flex gap-5 p-3 " id="categories-container">
-        <h6 class="text-secondary fw-semibold" onclick="loadNewsByCategories('08','Home')">Home</h6>
+        <h6 class="text-secondary fw-semibold link-danger pointer" onclick="loadNewsByCategories('08','Home')">Home</h6>
         
       </div>
       <!-- Result found section  -->
