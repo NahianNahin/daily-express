@@ -63,11 +63,11 @@ const displayNews = (allNews,name) => {
             <img src="${singleNews.author.img}" alt="" class="img-fluid rounded-circle" style="width:2rem  ; height: 2rem;">
           </div>
           <div>
-            <p class="m-0">${singleNews.author.name}</p>
+            <p class="m-0">${singleNews.author.name ? singleNews.author.name : 'No Data Available'}</p>
             
           </div>
         </div>
-        <div><p class="m-0" ><i class="fa-regular fa-eye"></i> ${singleNews.total_view}</p> </div>
+        <div><p class="m-0" ><i class="fa-regular fa-eye"></i> ${singleNews.total_view ? singleNews.total_view : 'No Data Available'}</p> </div>
         <div class="d-none d-md-block d-lg-block">
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
@@ -143,16 +143,16 @@ const displayDetails = details => {
               <h6> <span class="text-bg-warning">Bagde :</span> ${details.rating.badge}</h6>
             </div>
       <div class="d-flex justify-content-between align-items-center">
-        <div class="d-flex gap-3 align-items-center py-4">
+        <div class="d-flex gap-2 align-items-center py-4">
           <div>
             <img src="${details.author.img}" alt="" class="img-fluid rounded-circle" style="width:2rem  ; height: 2rem;">
           </div>
           <div>
-            <p class="m-0">${details.author.name}</p>
+            <p class="m-0">${details.author.name ? details.author.name : 'No Data Available'}</p>
             
           </div>
         </div>
-        <div><p class="m-0" ><i class="fa-regular fa-eye"></i> ${details.total_view}</p> </div>
+        <div><p class="m-0" ><i class="fa-regular fa-eye"></i> ${details.total_view ? details.total_view : 'No Data Available'}</p> </div>
         <div class="d-none d-md-block d-lg-block text-warning">
           
           <i class="fa-solid fa-star"></i>
