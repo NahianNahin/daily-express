@@ -51,23 +51,16 @@
       <hr>
       <!-- Catagoeirs UI  -->
       <div class="d-lg-flex gap-5 p-3 " id="categories-container">
-        <h6 class="text-secondary fw-semibold" onclick="loadNewsByCategories('08',7)">Home</h6>
-        <!-- <h6 class="text-secondary fw-semibold" onclick="loadNewsByCategories('01')">Breaking news </h6>
-        <h6 class="text-secondary fw-semibold" onclick="loadNewsByCategories('02')">Regular news</h6>
-        <h6 class="text-secondary fw-semibold" onclick="loadNewsByCategories('03')">International news</h6>
-        <h6 class="text-secondary fw-semibold" onclick="loadNewsByCategories('04')">Sports</h6>
-        <h6 class="text-secondary fw-semibold" onclick="loadNewsByCategories('05')">Entertainment</h6>
-        <h6 class="text-secondary fw-semibold" onclick="loadNewsByCategories('06')">Culture</h6>
-        <h6 class="text-secondary fw-semibold" onclick="loadNewsByCategories('07')">Arts</h6>
-        <h6 class="text-secondary fw-semibold" onclick="loadNewsByCategories('08')">All news</h6> -->
+        <h6 class="text-secondary fw-semibold" onclick="loadNewsByCategories('08','Home')">Home</h6>
+        
       </div>
       <!-- Result found section  -->
 
       <div class="bg-white p-3 rounded-3" id="result-found">
-        <!-- <h6>4 items found for category Entertainment</h6> -->
+        
       </div>
       <!-- Sort By View and Type section  -->
-      <section class="d-lg-flex d-md-flex justify-content-between align-items-center m-4">
+      <section class="d-lg-flex d-md-flex justify-content-between align-items-center m-4" >
         <div class="d-flex gap-3 align-items-center">
           <label for="" class="fw-semibold">Sort By View:</label>
           <select class="form-select form-select-sm " style="width:7rem;" aria-label=".form-select-sm example">
@@ -83,6 +76,22 @@
       </section>
       <!-- News Post Section  -->
       <section id="news-container">
+        
+        <!--Spinner LOADIND  -->
+      <div class="d-flex justify-content-center align-items-center d-none" style="height: 400px;" id="loading-section">
+        <div class="spinner-grow text-danger" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+      <!-- MODAL  -->
+      <div class="modal fade img-fluid" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" id="modal">
+
+        </div>
+      </div>
+
+      
+      
         
       </section>
       
