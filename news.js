@@ -123,6 +123,7 @@ const loadDetails = newsId => {
   .then(data => displayDetails(data.data[0]))
   .catch(error => console.log(error));
 }
+// display in Modal 
 
 const displayDetails = details => {
   const modalContainer = document.getElementById('modal');
