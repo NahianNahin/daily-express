@@ -48,7 +48,7 @@ const loadNewsByCategories = async(id,name) => {
 }
 // Display News by Categories
 const displayNews = (allNews,name) => {
-    
+    // sort by 
     allNews = allNews.sort((b, a) => a.total_view - b.total_view);
     console.log(allNews);
     const newsContainer = document.getElementById('news-container');
@@ -59,16 +59,16 @@ const displayNews = (allNews,name) => {
         card.classList.add('card');
         card.classList.add('mb-3');
         card.innerHTML = `
-        <div class="row g-0">
-        <div class="col-md-4">
+        <div class="row g-0 ">
+        <div class="col-md-4 p-3">
           <img src="${singleNews.image_url}" class="img-fluid d-md-none d-lg-block" alt="...">
           <img src="${singleNews.thumbnail_url}" class="img-fluid d-md-block d-lg-none d-none" alt="...">
         </div>
         <div class="col-md-8">
-          <div class="card-body">
+          <div class="card-body ">
             <h5 class="card-title">${singleNews.title}</h5>
-            <p class="card-text"><small class="text-muted">${singleNews.details.slice(0,250)}...</small></p>
-            <p class="card-text d-lg-none d-md-none"><small class="text-muted">${singleNews.details.slice(151,250)}...</small></p>
+            <p class="card-text"><small class="text-muted ">${singleNews.details.slice(0,200)}...</small></p>
+            <p class="card-text d-lg-none  d-md-block"><small class="text-muted text-truncate d-block"">${singleNews.details}...</small></p>
             <div class="d-flex justify-content-between align-items-center">
         <div class="d-flex gap-3 align-items-center">
           <div>
@@ -87,7 +87,7 @@ const displayNews = (allNews,name) => {
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star-half-stroke"></i>
         </div>
-        <div class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="loadDetails('${singleNews._id}')">
+        <div class="btn btn-outline-danger fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="loadDetails('${singleNews._id}')">
           <i class="fa-solid fa-arrow-right"></i>
         </div>
 
@@ -145,8 +145,8 @@ const displayDetails = details => {
       <img src="${details.image_url}" alt="" class="img-fluid">
       <p>${details.details}</p>
       <div class="d-flex gap-5 align-items-center">
-              <h6><span class="text-bg-warning">Rating :</span>  ${details.rating.number} </h6>
-              <h6> <span class="text-bg-warning">Bagde :</span> ${details.rating.badge}</h6>
+              <h6><span class="text-bg-warning fw-semibold">Rating :</span>  ${details.rating.number} </h6>
+              <h6> <span class="text-bg-warning fw-semibold">Bagde :</span> ${details.rating.badge}</h6>
             </div>
       <div class="d-flex justify-content-between align-items-center">
         <div class="d-flex gap-2 align-items-center py-4">
@@ -176,6 +176,7 @@ const displayDetails = details => {
 
   modalContainer.appendChild(modalContent);
 }
+
 
 
 
